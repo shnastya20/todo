@@ -23,14 +23,21 @@ document.addEventListener("DOMContentLoaded",
         displayTasks();
 });
 
-function addTask() {
 
+/**
+ * button click handler. Creating new task
+ */
+function addTask() {
+    
 }
 
+/**
+ * button click handler. Delete all tasks. 
+ */
 function deleteAllTasks() {
 
 }
 
 function displayTasks() {
-    
+
 }
