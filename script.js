@@ -8,6 +8,8 @@ const todoCount = document.getElementById("todoCount");
 const addButton = document.querySelector(".btn");
 const deleteButton = document.getElementById("deleteButton");
 
+const API_URL = 'http://localhost:3000/tasks';
+
 // Initialize
 
 document.addEventListener("DOMContentLoaded", 
@@ -43,9 +45,6 @@ function addTask() {
 /**
  * button click handler. Delete all tasks. 
  */
-function deleteAllTasks() {
-
-}
 
 function displayTasks() {
     todoList.innerHTML = "";
@@ -53,7 +52,7 @@ function displayTasks() {
         const p = document.createElement("p");
         p.innerHTML = `
             <div class="todo-container">
-                <input type="checkbox" class="todo-checkbox" id=""input-${index} ${item.disabled ? "checked" : ""}/>
+                <input type="checkbox" class="todo-checkbox" id=input-${index} ${item.disabled ? "checked" : ""}/>
                 <p id="todo-${index}" class="${item.disabled ? "disabled" : ""}" onclick="editTask(${index})"> ${item.text}
                 </p>
             </div>
